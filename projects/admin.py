@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import LuDeviceType, LuStatusDevice, Device, Reading
+from .models import Device, LuDeviceType, LuStatusDevice, Reading
 
 admin.site.register(LuDeviceType)
 admin.site.register(LuStatusDevice)
