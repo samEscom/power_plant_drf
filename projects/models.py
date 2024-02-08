@@ -1,5 +1,6 @@
+from datetime import datetime
+
 from django.db import models
-from datetime import  datetime
 
 # Create your models here.
 
@@ -20,8 +21,8 @@ class Device(models.Model):
     current_power = models.FloatField()
     device_type_id = models.ForeignKey(LuDeviceType, on_delete=models.CASCADE)
     status_device_id = models.ForeignKey(LuStatusDevice, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(default=datetime.now, blank=False,  null=False)
-    updated_at = models.DateTimeField(default=None, blank=False,  null=False)
+    created_at = models.DateTimeField(default=datetime.now, blank=False, null=False)
+    updated_at = models.DateTimeField(default=None, blank=False, null=False)
 
 
 class Reading(models.Model):
@@ -29,4 +30,4 @@ class Reading(models.Model):
     device_id = models.ForeignKey(Device, on_delete=models.CASCADE)
     device_type_id = models.ForeignKey(LuDeviceType, on_delete=models.CASCADE)
     current_power = models.FloatField()
-    created_at = models.DateTimeField(default=datetime.now, blank=False,  null=False)
+    created_at = models.DateTimeField(default=datetime.now, blank=False, null=False)
