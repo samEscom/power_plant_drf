@@ -22,7 +22,7 @@ class Device(models.Model):
     device_type_id = models.ForeignKey(LuDeviceType, on_delete=models.CASCADE)
     status_device_id = models.ForeignKey(LuStatusDevice, on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=datetime.now, blank=False, null=False)
-    updated_at = models.DateTimeField(default=None, blank=False, null=False)
+    updated_at = models.DateTimeField(default=None, blank=True, null=True)
 
 
 class Reading(models.Model):
